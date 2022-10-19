@@ -1,4 +1,4 @@
-# BankApplication
+# Banking Application
 Application for handling new customer bank account requests.
 
 Application can:
