@@ -1,7 +1,15 @@
 //abstract class, therefore won't be able to create objects from Account class, need to specify type of account
 public abstract class Account implements BaseInterestRate {
+
+    //List common properties for savintgs and checking account
     private String accountHolder;
     private int accountNumber;
-    private String accountType;
     private Double balance;
+
+    //Constructor to set base properties and initialize account
+
+
+    //common methods
+
+
 }
