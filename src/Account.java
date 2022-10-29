@@ -2,9 +2,11 @@
 public abstract class Account implements BaseInterestRate {
 
     //List common properties for savings and checking account
-    private String accountHolder;
-    private int accountNumber;
+    private String name;
+    private String ssn;
     private Double balance;
+    private int accountNumber;
+    private double rate;
 
     //Constructor to set base properties and initialize account
     public Account(String name) {
