@@ -9,7 +9,14 @@ public abstract class Account implements BaseInterestRate {
     private double rate;
 
     //Constructor to set base properties and initialize account
-    public Account(String name) {
+    public Account(String name, String ssn, double initDeposit) {
+        this.name = name;
+        this.ssn = ssn;
+        balance = initDeposit;
+
+        System.out.println("Name: " + name);
+        System.out.println("SSN: " + ssn);
+        System.out.println("Initial deposit: $" + initDeposit);
         System.out.print("NEW ACCOUNT: ");
     }
 
