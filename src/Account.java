@@ -4,11 +4,11 @@ import java.util.Random;
 public abstract class Account implements BaseInterestRate {
 
     //List common properties for savings and checking account
-    private String name;
-    private String ssn;
-    private Double balance;
-    private String accountNumber;
-    private double rate;
+    String name;
+    String ssn;
+    Double balance;
+    String accountNumber;
+    double rate;
 
     //index to help with unique 5-digit numbers used for accounts
     static int index = 10000;
@@ -26,9 +26,6 @@ public abstract class Account implements BaseInterestRate {
         //set account number
         index++;
         this.accountNumber = setAccountNumber();
-        System.out.println("Account Number: " + accountNumber);
-
-        System.out.print("NEW ACCOUNT: ");
     }
 
     private String setAccountNumber() {
