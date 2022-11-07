@@ -13,15 +13,14 @@ public abstract class Account implements BaseInterestRate {
     //index to help with unique 5-digit numbers used for accounts
     static int index = 10000;
 
+    //variable to differentiate between Checking and Savings account types
+    String accountType;
+
     //Constructor to set base properties and initialize account
     public Account(String name, String ssn, double initDeposit) {
         this.name = name;
         this.ssn = ssn;
         balance = initDeposit;
-
-        System.out.println("Name: " + name);
-        System.out.println("SSN: " + ssn);
-        System.out.println("Initial deposit: $" + initDeposit);
 
         //set account number
         index++;
@@ -37,6 +36,11 @@ public abstract class Account implements BaseInterestRate {
     }
 
     //common methods
-
+    public void showInfo() {
+        System.out.println("Name: " + name + "\n" +
+                "SSN: " + ssn + "\n" +
+                "Balance: $" + balance + "\n" +
+                "Account Number: " + accountNumber);
+    }
 
 }

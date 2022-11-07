@@ -8,14 +8,19 @@ public class Savings extends Account {
     public Savings(String name, String ssn, double initDeposit) {
         super(name, ssn, initDeposit);
         accountNumber = "1" + accountNumber;
-        System.out.println("Account Number: " + accountNumber);
-        System.out.println("NEW SAVINGS ACCOUNT \n");
-
+        accountType = "SAVINGS";
     }
 
     //list methods specific to savings account
     @Override
     public void calculateInterest() {
 
+    }
+
+    public void showInfo() {
+        //thanks to super we get the info we need from the Account class before overriding here and adding account type
+        super.showInfo();
+        System.out.println("Account Type: " + accountType);
+        System.out.println("*************************");
     }
 }
