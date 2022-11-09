@@ -8,6 +8,10 @@ public class BankingApp {
         checkAcc1.showInfo();
         saveAcc1.showInfo();
 
+        saveAcc1.deposit(500);
+        saveAcc1.withdraw(200);
+        saveAcc1.transfer("Other account", 300);
+
         //Read CSV file then create new accounts based on that data
 
     }
