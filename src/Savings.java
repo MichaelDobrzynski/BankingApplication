@@ -16,7 +16,8 @@ public class Savings extends Account {
 
     @Override
     public void setRate() {
-       actualRate = 0.15 * baseRate;
+        double baseRate = getBaseRate();
+        rate = baseRate - 0.25;
     }
 
     //list methods specific to savings account

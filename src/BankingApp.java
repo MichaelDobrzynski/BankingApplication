@@ -9,8 +9,11 @@ public class BankingApp {
         saveAcc1.showInfo();
 
         saveAcc1.deposit(500);
-        saveAcc1.withdraw(200);
-        saveAcc1.transfer("Other account", 300);
+        saveAcc1.withdraw(250.25);
+        saveAcc1.transfer("Friends account", 150);
+
+        saveAcc1.compoundInterest();
+        checkAcc1.compoundInterest();
 
         //Read CSV file then create new accounts based on that data
 

@@ -14,7 +14,8 @@ public class Checking extends Account {
 
     @Override
     public void setRate() {
-        actualRate = baseRate - 0.25;
+        double baseRate = getBaseRate();
+        rate = 0.15 * baseRate;
     }
 
     //list methods specific to checking account

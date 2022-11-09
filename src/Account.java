@@ -10,9 +10,8 @@ public abstract class Account implements BaseInterestRate {
     Double balance;
     String accountNumber;
 
-    //variables for interest rates, actualRate calculated in inherited classes thanks to abstract method setRate
-    double baseRate = getBaseRate();
-    double actualRate;
+    //variable for interest rates, actual interest rate calculated in inherited classes thanks to abstract method setRate
+    double rate;
 
     //index to help with unique 5-digit numbers used for accounts
     static int index = 10000;
@@ -45,27 +44,34 @@ public abstract class Account implements BaseInterestRate {
         return lastTwoSsn + uniqueFiveDigits + randomNumber;
     }
 
+    public void compoundInterest() {
+        double accruedInterest = balance * (rate/100);
+        balance += accruedInterest;
+        System.out.println("Accrued interest for " + accountType + " account: $" + accruedInterest);
+        printBalance();
+    }
+
     //common methods for account transactions
     public void deposit(double amount) {
-        System.out.println("Depositing: $" + amount);
+        System.out.println("Depositing $" + amount + " to " + name + "'s " + accountType + " account.");
         balance += amount;
         printBalance();
     }
 
     public void withdraw(double amount) {
-        System.out.println("Withdrawing: $" + amount);
+        System.out.println("Withdrawing: $" + amount + " from " + name + "'s " + accountType + " account.");
         balance -= amount;
         printBalance();
     }
 
     public void transfer(String whereTo, double amount) {
-        System.out.println("Transferring $" + amount + " to " + whereTo);
+        System.out.println("Transferring $" + amount + " from " + name + "'s " + accountType + " account to " + whereTo);
         balance -= amount;
         printBalance();
     }
 
     public void printBalance() {
-        System.out.println("Your balance is $" + balance);
+        System.out.println("The balance of the " + accountType + " account for " + name + " is $" + balance + "\n");
     }
 
     public void showInfo() {
@@ -73,7 +79,7 @@ public abstract class Account implements BaseInterestRate {
                 "SSN: " + ssn + "\n" +
                 "Balance: $" + balance + "\n" +
                 "Account Number: " + accountNumber);
-        System.out.println("Interest rate: " + actualRate + "%");
+        System.out.println("Interest rate: " + rate + "%");
     }
 
 }
