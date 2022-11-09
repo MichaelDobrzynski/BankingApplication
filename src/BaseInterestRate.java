@@ -1,5 +1,7 @@
 public interface BaseInterestRate {
 
-    //Write method that returns a base rate
-    public void calculateInterest();
+    //method that returns a base rate
+    default double getBaseRate() {
+        return 2.5;
+    }
 }

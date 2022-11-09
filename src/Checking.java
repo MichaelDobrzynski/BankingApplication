@@ -12,11 +12,12 @@ public class Checking extends Account {
         setDebitCard();
     }
 
-    //list methods specific to checking account
     @Override
-    public void calculateInterest() {
-
+    public void setRate() {
+        actualRate = baseRate - 0.25;
     }
+
+    //list methods specific to checking account
 
     public void showInfo() {
         //thanks to super we get the info we need from the Account class before overriding here and adding account type

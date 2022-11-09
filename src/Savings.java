@@ -14,11 +14,12 @@ public class Savings extends Account {
 
     }
 
-    //list methods specific to savings account
     @Override
-    public void calculateInterest() {
-
+    public void setRate() {
+       actualRate = 0.15 * baseRate;
     }
+
+    //list methods specific to savings account
 
     public void showInfo() {
         System.out.println("Account Type: " + accountType);
@@ -27,7 +28,6 @@ public class Savings extends Account {
         System.out.println(" Savings Account Features: " + "\n" +
                 " - Safety Deposit Box ID: " + safetyDepositBoxID + "\n" +
                 " - Safety Deposit Box Key: " + safetyDepositBoxKey);
-
         System.out.println("*************************");
     }
 
