@@ -25,8 +25,8 @@ public class Savings extends Account {
         //thanks to super we get the info we need from the Account class before overriding here and adding account type
         super.showInfo();
         System.out.println(" Savings Account Features: " + "\n" +
-                " Safety Deposit Box ID: " + safetyDepositBoxID + "\n" +
-                " Safety Deposit Box Key: " + safetyDepositBoxKey);
+                " - Safety Deposit Box ID: " + safetyDepositBoxID + "\n" +
+                " - Safety Deposit Box Key: " + safetyDepositBoxKey);
 
         System.out.println("*************************");
     }
