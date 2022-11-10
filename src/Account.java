@@ -5,16 +5,16 @@ import java.util.Scanner;
 public abstract class Account implements BaseInterestRate {
 
     //List common properties for savings and checking account
-    String name;
-    String ssn;
-    Double balance;
-    String accountNumber;
+    private String name;
+    private String ssn;
+    private Double balance;
+    protected   String accountNumber;
 
     //variable for interest rates, actual interest rate calculated in inherited classes thanks to abstract method setRate
-    double rate;
+    protected double rate;
 
     //index to help with unique 5-digit numbers used for accounts
-    static int index = 10000;
+    private static int index = 10000;
 
     //variable to differentiate between Checking and Savings account types
     String accountType;
